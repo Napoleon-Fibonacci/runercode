@@ -3,43 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML Runner</title>
+  <title>HTML Runer</title>
   <meta name="description" content="Jalankan kode HTML/CSS/JS langsung di browser. Ringan, tanpa akun, ada share link." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script>
-    // Tentukan lebih awal (sebelum paint): mainkan intro atau lewati.
-    (function () {
-      var d = document.documentElement;
-      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var seen = false;
-      try { seen = sessionStorage.getItem('html-runer-intro') === '1'; } catch (e) {}
-      if (reduce || seen) {
-        d.classList.add('intro-skip');
-      } else {
-        d.classList.add('anim');
-        try { sessionStorage.setItem('html-runer-intro', '1'); } catch (e) {}
-      }
-    })();
-  </script>
 </head>
 <body>
-  <div id="intro" class="intro" aria-hidden="true">
-    <div class="intro-inner">
-      <svg class="intro-trace" viewBox="0 0 420 60" preserveAspectRatio="none" aria-hidden="true">
-        <polyline points="0,30 60,30 70,18 80,42 90,30 150,30 160,8 170,52 180,30 250,30 260,20 270,40 280,30 340,30 350,14 360,46 370,30 420,30" />
-      </svg>
-      <div class="intro-brand"><span>HTML</span><span>Runner</span></div>
-      <p class="intro-tag">pratinjau kode instan</p>
-      <div class="intro-bar"><span></span></div>
-    </div>
-  </div>
-
   <header class="toolbar">
     <div class="brand">
-      <span class="brand-name">HTML Runner</span>
+      <span class="brand-name">HTML Runer</span>
       <span class="brand-tag">pratinjau kode instan</span>
     </div>
 
