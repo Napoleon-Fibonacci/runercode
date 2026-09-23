@@ -1,6 +1,6 @@
-'use strict';
+﻿'use strict';
 
-// ===== HTML Runer — pure utils (tanpa DOM, bisa dites via node) =====
+// ===== HTML Runner — pure utils (tanpa DOM, bisa dites via node) =====
 
 // Cegah isi CSS/JS menutup tag <style>/<script> lebih awal.
 function escapeForTag(code, tagName) {

@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 // ===== Referensi elemen =====
 const $id = (id) => document.getElementById(id);
@@ -60,7 +60,7 @@ const DEFAULT_COMBINED = [
   '</head>',
   '<body>',
   '  <div class="kartu">',
-  '    <h1>Halo, HTML Runer! 👋</h1>',
+  '    <h1>Halo, HTML Runner! 👋</h1>',
   '    <p>Edit kode di editor, lalu klik <strong>Run ▸ Tab Baru</strong>.</p>',
   '    <button id="tombol">Klik aku</button>',
   '  </div>',
@@ -81,7 +81,7 @@ const DEFAULT_COMBINED = [
 const DEFAULT_SEPARATED = {
   html: [
     '<div class="kartu">',
-    '  <h1>Halo, HTML Runer! 👋</h1>',
+    '  <h1>Halo, HTML Runner! 👋</h1>',
     '  <p>Edit kode di editor, lalu klik <strong>Run ▸ Tab Baru</strong>.</p>',
     '  <button id="tombol">Klik aku</button>',
     '</div>'
@@ -251,10 +251,10 @@ function downloadHtml() {
   const blob = new Blob([buildDocument(getState(), false)], { type: 'text/html' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'runer.html';
+  a.download = 'runner.html';
   a.click();
   URL.revokeObjectURL(a.href);
-  toast('File diunduh sebagai runer.html');
+  toast('File diunduh sebagai runner.html');
 }
 
 function applyTheme(t) {
