@@ -313,14 +313,9 @@ els.segGabung.addEventListener('click', toCombined);
 els.segTerpisah.addEventListener('click', toSeparate);
 
 els.reset.addEventListener('click', () => {
-  if (confirm('Kembalikan editor ke kode contoh? Isi sekarang akan hilang.')) {
-    if (mode === 'gabung') {
-      setState({ html: DEFAULT_COMBINED, css: '', js: '' });
-    } else {
-      setState(DEFAULT_SEPARATED);
-    }
-    saveState();
-  }
+  if (!confirm('Kosongkan semua editor? Kode sekarang akan hilang.')) return;
+  setState({ html: '', css: '', js: '' });
+  saveState();
 });
 
 els.upload.addEventListener('change', () => {
