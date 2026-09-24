@@ -248,13 +248,18 @@ function copyShareLink() {
 }
 
 function downloadHtml() {
+  // Minta nama file dari user; batal = tidak download.
+  const raw = prompt('Nama file (tanpa .html):', 'runner');
+  if (raw === null) return;
+  let name = String(raw).trim().replace(/[\\/:*?"<>|]/g, '-').replace(/\.html?$/i, '');
+  if (!name) name = 'runner';
   const blob = new Blob([buildDocument(getState(), false)], { type: 'text/html' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'runner.html';
+  a.download = name + '.html';
   a.click();
   URL.revokeObjectURL(a.href);
-  toast('File diunduh sebagai runner.html');
+  toast('File diunduh sebagai ' + name + '.html');
 }
 
 function applyTheme(t) {
